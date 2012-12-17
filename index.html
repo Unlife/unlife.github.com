@@ -312,16 +312,48 @@ HTML используется для создание каркаса сайта,
                  </div>
                <div id="page20" class="page">
 <h2>Контакты</h2>
-<tr>
-<td>
-<form action="php/message.php" method=post>
-<strong>Ваше имя</strong><br><input type=text name=name size=30><p>
-<strong>Ваш e-mail</strong><br><input type=text name=email size=30><p>
-<strong>Ваш вопрос</strong><br><textarea name=mess rows=8 cols=60></textarea><p>
-<input type=submit value="" title="Отправить">
+<form name="mail" method="post" enctype="text/plain">
+<strong>Ваше имя :</strong><br>
+<input type="text" id="name" size="30"
+onChange="msg ()"><br>
+<strong>Тема :</strong><br>
+<input type="text" id="subj" size="30"
+onChange="msg ()"><br>
+<strong>Сообщение:</strong><br>
+<textarea id="message" cols="80" rows="6"
+onChange="msg ()">
+</textarea>
+<br>
+<input type="submit" value=""
+onClick="return checkIt ()">
 </form>
-</td>
-</tr>
+<script language="JavaScript">
+function checkIt () {
+    if (document.getElementById('name').value!= "") {
+    } else {
+        alert ("Пожалуйста введите Ваше имя:");
+        document.getElementById('name').focus ();
+        return false;
+    }
+  if (document.getElementById('subj').value!= "") {
+    } else {
+        alert ("Пожалуйста введите тему сообщения");
+        document.getElementById('subj').focus ();
+        return false;
+    }
+        if (document.getElementById('message').value!= "") {
+        return true;
+    } else {
+        alert ("Пожалуйста заполните поле сообщения");
+        document.getElementById('message').focus ();
+        return false;
+    }
+}
+function msg () {
+    document.mail.action = "mailto:unlifered@gmail.com" + '?subject='+encodeURIComponent(document.getElementById('subj').value) 
+    + '&body='+encodeURIComponent(document.getElementById('name').value) +" пишет Вам : " +encodeURIComponent(document.getElementById('message').value);
+}
+</script>
                     </div>               
                  
 </div>	
