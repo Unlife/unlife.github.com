@@ -32,6 +32,16 @@ function showpage(nm) { $('.page').hide(); if (nm) $(nm).fadeIn('5000') ; }
 showpage(document.location.href);
 </script>
 
+<script>
+  (function() {
+    var cx = '008310530616861633965:aooq-ubvlu4';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
 </head>
 
 <body>
@@ -45,8 +55,7 @@ showpage(document.location.href);
 <div id="logo"><img src="img/logo.png" /></div>
 
 <div id="search-panel">
-<div class="ya-site-form ya-site-form_inited_no" onclick="return {'bg': '#1976f1', 'target': '_self', 'language': 'ru', 'suggest': true, 'tld': 'ru', 'site_suggest': true, 'action': 'http://unlife.github.com/search.html', 'webopt': false, 'fontsize': 12, 'arrow': true, 'fg': '#000000', 'searchid': '1993743', 'logo': 'rb', 'websearch': false, 'type': 2}"><form action="http://yandex.ru/sitesearch" method="get" target="_self"><input type="hidden" name="searchid" value="1993743" /><input type="hidden" name="l10n" value="ru" /><input type="hidden" name="reqenc" value="" /><input type="text" name="text" value="" /><input type="submit" value="Найти" /></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;(' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1&&(e.className+=' ya-page_js_yes');s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
-
+<gcse:searchbox-only></gcse:searchbox-only>
  </div> 
  </div>
 
@@ -82,8 +91,8 @@ showpage(document.location.href);
       <ul>
          <li><a href="#page1" onclick="showpage('#page1')">Общая информация</a></li>
          <li><a href="#page2" onclick="showpage('#page2')">Образование</a></li>
-         <li><a href="#page3" onclick="showpage('#page3')">Навыки и умения</a></li>
-         <li><a href="#page4" onclick="showpage('#page4')">Про Школу</a></li>
+         <li><a href="#page3" onclick="showpage('#page3')">Компьютерные навыки</a></li>
+         <li><a href="#page4" onclick="showpage('#page4')">Прочие навыки</a></li>
        </ul>	
     </li>
      <li><a href="#">Опыт работы</a>
@@ -124,7 +133,9 @@ showpage(document.location.href);
  <p></p>
  <strong>Год рождения :</strong>  1985<br>
  <p></p>
- <strong>Город :</strong>  Симферополь</p>											
+ <strong>Город :</strong>  Симферополь</p>
+ <p></p>
+ <strong>Семейное положение :</strong>  женат</p>
 	</div>
         
 		<div id="page2" class="page">
@@ -148,19 +159,14 @@ showpage(document.location.href);
 <li>Монтаж и обслуживание ЛВС, настройка активного сетевого оборудования (маршрутизаторы, коммутаторы), включая беспроводное;
 монтаж стоечного оборудования (сервера, сетевое оборудование, системы бесперебойной подачи питания);</li>
 <li>Администрирование специализированного ПО (электронные платежные системы, системы видеонаблюдения, программаторы АТС).</li></ul>
+
+	</div>
+     <div id="page4" class="page">
+<h2>Прочие навыки</h2><br />
 <strong>Знание английского языка:</strong><br /> 
 На среднем уровне - чтение технической документации, работа с <br /> англоязычным интерфейсом различного ПО, опыт переписки с техническими<br />специалистами, разговорный английский требует дополнительной практики.<br />
 <p>
 <strong>Водительские права:</strong>  Категория B,C
-	</div>
-     <div id="page4" class="page">
-<h2>Про Школу</h2><br />
-От участия в Школе я ожидаю получение практических навыков по созданию
-сайтов, освоение навыков и приемов разработки, а также освоение некоторых ньюансов, связанных с дизайном.
-<p></p>
-О Школе я узнал от своего друга, работающего в компании "Киевстар".
-<p></p>
-Я готов уделять стажировке столько времени, сколько потребуется для максимального освоения учебного материала.
 	</div>
       <div id="page5" class="page">						
 <h2>Симферопольское Казенное экспериментальное протезно-ортопедическое предприятие (СКЭПОП), г.Симферополь</h2><br /><p>
@@ -266,7 +272,7 @@ showpage(document.location.href);
 					</div>
 					<div id="page15" class="page">	
 <h2>Языки программирования</h2><p>
-HTML и CSS, адаптация готовых jQuery скриптов для встраивания в сайт.<br />
+HTML и CSS, написание Javascript и jQuery скриптов, встраивание их в сайт.<br />
 HTML используется для создание каркаса сайта, CSS для разметки и оформления, Jquery для добавления эффектов.<br />
 Для оформления простых элеметов навигации предпочитаю использовать спрайты, для более сложных - Jquery, однако применять javascript предпочитаю умеренно, чтобы не иметь проблем с кроссбраузерностью.</p>
 					</div>	
